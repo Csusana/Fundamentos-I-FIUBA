@@ -11,3 +11,22 @@ NOTA: ALGO PARTICULAR DE C
 para caracteres usamos comillas simples 'H' 'O' 'L' 'A'
 para cadenas comillas dobles " Hola Mundo "
 
+¿COMO LEEMOS CARACTERES? funciona igual  mejor q scanf
+
+1- fgets(variable, longitud, origen) 
+ej: fgets (domicilio, 20, stdin);
+
+2- fflush(stdin) // limpia el buffer para evitar problemas 
+
+#include <stdio.h>
+void main() { 
+    char nombres[15];
+
+    printf("nombres: ");
+    fgets(nombres,15, stdin);
+    
+    fflush(stdin);
+    
+    printf("tu nombre es :%s", nombres);
+    return;
+}
