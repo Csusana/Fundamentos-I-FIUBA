@@ -1,1 +1,35 @@
-
+#include <stdio.h>
+void main() {
+    char cadena[] = "Hola Mundo";
+    printf("\ncadena:%s \n", cadena);
+    
+    //recorro como arreglo y muestro cada uno de los elementos
+    printf("Resultado de correr hasta la ultima posicion: \n");
+    int i;
+    for (i=0; i<sizeof(cadena); i++){
+        printf("posicion [%i]: %c \n", i,cadena[i]);
+    }
+    printf("capacidad de %li bytes", sizeof(cadena));
+    
+    
+    //recorro buscando \0 (el caracter de finalizacion)
+    printf ("\n Resultado hasta encontrar la marcad el fin \n");
+    i=0;
+    while(cadena[i]!='\0'){
+      printf("posicion[%i]: %c\n", i, cadena[i]);
+      i++;
+    }
+    printf("Total caracteres: %i\n",i);
+    printf("cadena: %s- \n", cadena); // %s- imprime inmediantamete despues 
+    
+    printf("\npresiones ENTER para continuar \n");
+    getchar();// enter por el usuario 
+    
+    
+    // modifico posiciones de la cadena
+    cadena[0]= 'X';
+    cadena[8]= 'X';
+    printf("\nResultdo : %s \n", cadena);
+    
+    return;
+}
