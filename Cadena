@@ -1,1 +1,13 @@
+CASDENA DE CARATERES 
+
+'H' 'O' 'L' 'A' '_' 'M' 'U' 'N' 'D' 'O' '/0'
+
+¿Como se declara la variable ?
+CHAR cadena1 [15] = " Hola Mundo 1"; 
+CHAR cadena2 [] = " Hola Mundo 2"; 
+CHAR cadena3 [20]; 
+
+NOTA: ALGO PARTICULAR DE C
+para caracteres usamos comillas simples 'H' 'O' 'L' 'A'
+para cadenas comillas dobles " Hola Mundo "
 
