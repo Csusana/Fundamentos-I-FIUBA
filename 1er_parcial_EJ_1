@@ -1,0 +1,50 @@
+/* Desarrollar una funcion en lenguaje C recibida como parametro un numero entero y 
+devuelva al modulo invocante los osguientes valores:
+  . el mayor digito que compone al numero entero recibido
+  . la cantidad de veces que dicho digito maximo s eencuentra en el numero recibido
+
+CUIDADO:  
+  . evitar pasaje por referencia
+  . return de dos valores o un vector
+  . uso de dos ciclos inecesarios
+  . printf en vez de devolver valores solicitados 
+*/ 
+
+*******************************************************************************/
+#include <stdio.h>
+
+void detectar_mayor_digito (int numero, int *mayor, int *cantidad){
+    
+    *mayor = 0;
+    *cantidad = 0;
+    
+    while (numero > 0 ){
+        int digito = numero % 10;
+        
+        if (digito > *mayor){
+            *mayor = digito;
+            *cantidad = 1;
+        }else if (digito == *mayor){
+            (*cantidad) ++;
+        }
+        numero /= 10;
+    }
+   printf("El mayor es %d y  %d veces.\n", *mayor, *cantidad);
+  
+}
+
+
+
+int main()
+{
+    int numero, mayor, cantidad; 
+    
+    printf("ingrese un numero: \n");
+    scanf("%i", &numero); //123442 --> 4 2
+    
+    detectar_mayor_digito(numero, &mayor, &cantidad);
+    
+    printf("El mayor dígito es %d y aparece %d veces.\n", mayor, cantidad);
+
+    return 0;
+}
