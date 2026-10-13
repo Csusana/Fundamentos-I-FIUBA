@@ -1,1 +1,9 @@
+/*Desarrollar una funcion que reciba como paramertros un vector de tipo Tvector ya cargado y su respecitivo ML,
+y devuelva el arreglo invertido y la cantidad de intercambios que fueron relizados pero cumpliendo las siguientes condiciones.
+1. La inversion del vector debe ser sobre si mismo, nose puede usar un vector auxiliar.
+2. Si las posiciones a invertir contienen el mismo valor, no deben ser interabmiadas.
+3. No tiene que definir CargarDatos solamente llamar a la funcion en su programa
 
+Ejemplo: V = (4, 7, 0, 5, 7, 2, ?, ?, ?, ?) con MF 10 y ML 2
+Debemos intercambiar el 4 con el 2, el 0 con el 5 pero no el 7 con el 7. Ademas devolver un 2 para indicar la cantidad de cambios realizados
+*/
